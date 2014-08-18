@@ -1,0 +1,78 @@
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140818184931)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140818184931"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducts (20140818185838)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "product_name" character varying(255), "image" character varying(255), "price" integer, "description" character varying(255), "user_id" integer) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140818185838"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 13:18:30 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/lindsayrecknell/.rvm/gems/ruby-2.1.1@global/gems/railties-4.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 25ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 13:19:48 -0600
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00000105178008>:0x00000105173440>):
+    1: <p>Welcome <%= current_user.username %></p>
+    2: 
+    3: <%= button_to "Sign Out", signout_path, method: :delete %>
+  app/views/dashboard/show.html.erb:1:in `_app_views_dashboard_show_html_erb__2903649581614289489_2190183540'
+
+
+  Rendered /Users/lindsayrecknell/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/lindsayrecknell/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/lindsayrecknell/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 13:25:13 -0600
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00000105178008>:0x00000103686060>):
+    1: <p>Welcome <%= current_user.username %></p>
+    2: 
+    3: <%= button_to "Sign Out", signout_path, method: :delete %>
+  app/views/dashboard/show.html.erb:1:in `_app_views_dashboard_show_html_erb__2903649581614289489_2190183540'
+
+
+  Rendered /Users/lindsayrecknell/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/lindsayrecknell/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/lindsayrecknell/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 13:27:05 -0600
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 709ms (Views: 708.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 13:27:06 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-18 13:27:06 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-18 13:27:06 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 13:27:06 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 13:27:06 -0600
