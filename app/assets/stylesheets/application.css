@@ -13,3 +13,263 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+body {
+    background-color:#fff;
+
+}
+
+header {
+    background-color: #fff;
+    height: 40px;
+    border-bottom:thin solid lightgrey;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+header img {
+    width: 35px;
+    height: 35px;
+}
+
+#content {
+    background-color: #fff;
+}
+
+footer {
+    background-color: lightgrey;
+    height: 50px
+}
+
+.wrapper {
+    margin: auto;
+    width: 980px;
+}
+
+
+/* ----- =columns ----- */
+
+.one_half { 	 width:460px; }
+.one_third {	 width:300px; }
+.two_third {	 width:620px; }
+.one_fourth {    width:220px; }
+
+.square_img {
+    height: 150px;
+    overflow: hidden;
+    border-top:thin solid lightgrey;
+    background: -webkit-linear-gradient(whitesmoke, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(whitesmoke, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(whitesmoke, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(whitesmoke, white); /* Standard syntax */
+
+}
+.square_img img{
+    width: 100%;
+
+}
+
+.three_fourth { width:700px; }
+.full_column {	 width:940px; }
+
+
+
+
+img {
+    width: 100%;
+}
+
+
+
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
+/* * For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+.clearfix { *zoom: 1; }
+
+
+/* DEMO STYLE - Box Outlines  */
+
+article {
+    /*box-sizing:border-box;*/
+    position:relative;
+    margin-left:20px;
+    margin-bottom:16px;
+    float:left;
+}
+
+section {
+    /*box-sizing:border-box;*/
+    padding: 20px 0 10px 0;
+}
+
+.one_fourth h2 {
+    text-align: center;
+}
+
+.fa-stack {
+    margin-left: 50px;
+}
+
+
+
+/* LINDSAY'S CSS  */
+* {
+    color: #575451;
+}
+
+
+.homepage_main{
+
+    height: 320px;
+    background-image: url('apples.jpg');
+    background-size: cover;
+    margin: 10px;
+    height: 300px;
+
+}
+.homepage_main h1{
+    font-size: 24px;
+    text-align: left;
+    padding-left: 50px;
+    text-shadow: -3px 4px 5px #000000;
+    padding-top: 50px;
+    color: white;
+}
+.homepage_main h2{
+    font-size: 18px;
+    text-align: left;
+    padding-left: 50px;
+    text-shadow: -2px 4px 5px #000000;
+    color: white;
+}
+.homepage_main form{
+    padding-left: 50px;
+}
+.input_home_main {
+    width: 205px;
+}
+
+.logo{
+    /*height:40px;*/
+}
+.quick_links{
+    height:20px;
+    margin-top: 20px;
+}
+.join_signin_buttons{
+    float:right;
+    height:20px;
+    margin-top: 20px;
+}
+.space_between_links{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.join_signin_wrap{
+    margin-top: 30px;
+    margin-left: 300px;
+    padding: 30px 0px 5px 50px;
+    width: 300px;
+    border:thin solid lightgrey;
+}
+
+.join_signin_wrap h1{
+    font-size: 30px;
+    margin: 0;
+}
+.join_signin_wrap h2{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.join_signin_wrap h3{
+    font-size: 14px;
+}
+.join_signin_wrap .input{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.userpage_search{
+    height: 60px;
+    width: 300px;
+    float: right;
+}
+
+.userpage_categories{
+    height: 60px;
+    width: 200px;
+}
+
+.userpage_welcome{
+    text-align: center;
+    height: 100px;
+    background-color: lightsalmon;
+    padding-top: 10px;
+}
+
+
+.fourth_discript{
+    margin-top: 8px;
+    border-bottom:thin solid lightgrey;
+
+    background: -webkit-linear-gradient(white, whitesmoke); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, whitesmoke); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, whitesmoke); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, whitesmoke); /* Standard syntax */
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    height: 80px;
+    overflow: hidden;
+}
+.fourth_discript p {
+    width: 100%;
+}
+
+a:link {
+    color: darkgrey;
+    text-decoration: none;
+}
+a:visited{
+    color: darkgrey;
+    text-decoration: none;
+}
+a:hover{
+    color: lightgrey;
+    text-decoration: none;
+}
+
+.flash_block{
+    margin-top: 20px;
+    margin-left: 280px;
+}
+.error_flash {
+    color: red;
+}
+
+.non_error_flash {
+    color: #29C429;
+}
+
+.strip_button{
+    text-decoration: none;
+    link: none;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+
+
+
+

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "dashboard#show"
 
+
   resources :registrations, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
 
